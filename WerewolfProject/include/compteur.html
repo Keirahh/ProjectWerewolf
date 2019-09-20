@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+	<html lang="FR">
+		<head>
+			<meta charset="utf-8">
+			<title>Cartes du jeu</title>
+			<meta name="description" content="">
+  		    <meta name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Kalam|Kaushan+Script&display=swap" rel="stylesheet">
+			<link href="../css/compteur.css" rel="stylesheet">
+		</head>
+
+	<body>
+		<navbar id="menu">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="passion.html">Cartes du jeu</a></li>
+				<li><a href="regleDuJeu.html">Règles du jeu</a></li>
+				<li><a href="compteur.html">Compteur</a></li>
+			</ul>
+		</navbar>
+		<section id="mainCompteur">
+
+			<div id="audioCompteur">
+				<button id="jourButton" type="button">Jour</button>
+				<audio id="jourAudio" >
+					<source  src="../audio/sound/sound/ambiance/jour.mp3" type="audio/mpeg">
+				</audio> 
+				<button id="nuitButton" type="button">Nuit</button>
+				<audio id="nuitAudio" >
+					<source  src="../audio/sound/sound/ambiance/nuit.mp3" type="audio/mpeg">
+				</audio>
+				<audio id="loupAudio">
+					<source  src="../audio/sound/sound/bruitage/loup.mp3" type="audio/mpeg">
+				</audio> 
+				<button id="loupButton" type="button">Loup</button> 
+			</div>
+
+			<div id="containerCompteur">
+				<h1>Meneur de jeu</h1>
+				
+				<p>Le meneur endort le village.<br>
+<span>"C'est la nuit tout le village s'endort, les joueurs ferment les yeux"</span><br>
+Tous les joueurs baissent la tête et ferment les yeux.
+</p>
+				<p>Le meneur appelle Cupidon<br>
+<span>"Cupidon se réveille !"</span>.<br> Cupidon ouvre les yeux et désigne deux joueurs (dont éventuellement lui-même).<br>
+Le meneur fait le tour de la table et touche discrètement le dos des deux Amoureux.<br><span>Cupidon se rendort"</span></p>
+
+				<p>Le meneur appelle les Amoureux<br>
+<span>"les Amoureux se réveillent, se reconnaissent, et se rendorment !"</span> <br>Ils ne se montrent pas leur carte de sorte que chacun ignore la véritable personnalité de l'être aimé.</p>
+
+				<p>Le meneur appelle la Voyante.<br>
+<span>"la Voyante se réveille, et désigne un joueur dont elle veut sonder la véritable personnalité !"</span><br>
+Le meneur montre à la Voyante la face cachée de la carte du joueur que la Voyante a désigné.<br>
+<span>"La Voyante se rendort"</span><br></p>
+
+				<p>Le meneur appelle les Loups-Garous<br>
+<span>"les Loups-Carous se réveillent, se reconnaissent et désignent une nouvelle victime !"</span><br>
+Les Loups-Garous (et eux seulement) lèvent la tête, ouvrent les yeux, se concertent silencieusement et désignent une victime.<br>
+<span>"les Loups-Garous repus se rendorment et rêvent de prochaines victimes savoureuses !"</span></p>
+
+				<p>Le meneur appelle la Sorcière<br>
+<span>"la Sorcière se réveille, je lui montre la victime des Loups-Garous. Va-t-elle user de sa potion de guérison, ou d'empoisonnement ?"</span><br>
+Le meneur montre à la Sorcière la victime des Loups-Garous. La Sorcière n'est pas obligée d'user de son pouvoir à un tour spécifique. Si elle utilise une potion, elle doit désigner au meneur sa cible avec le pouce tendu vers le haut pour la guérison, ou vers le bas pour I'empoisonnement.</p>
+
+				<p>Le meneur réveille tout le village.<br>
+<span>"c'est le matin, le village se réveille, tout le monde se réveille et ouvre les yeux, tout le monde sauf..."</span></p>
+			</div>
+		</section>
+		<script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+		<script>
+			//son play and pause...
+			var pauseLoup= true;
+			var pauseJour = true;
+			var pauseNuit = true;
+
+			$('#loupButton').click(function(){
+				
+				if(pauseLoup){
+					$('#loupAudio')[0].play();
+					pauseLoup = false;
+				}
+					else{
+						$('#loupAudio')[0].pause();
+						pauseLoup = true;
+					}	
+			});
+
+			$('#jourButton').click(function(){
+				
+				if(pauseJour){
+					$('#jourAudio')[0].play();
+					pauseJour = false;
+				}
+					else{
+						$('#jourAudio')[0].pause();
+						pauseJour= true;
+						}
+					
+			});
+
+			$('#nuitButton').click(function(){
+				
+				if(pauseNuit){
+					$('#nuitAudio')[0].play();
+					pauseNuit = false;
+				}
+					else{
+						$('#nuitAudio')[0].pause();
+						pauseNuit = true;
+					}
+					
+			});
+
+		</script>
+	</body>
+	</html>

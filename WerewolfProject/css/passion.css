@@ -1,0 +1,100 @@
+body{
+	background-color: #000000;
+	margin:0;
+	width:100%;
+	height:100%;
+	font-family: 'Kaushan Script', cursive;
+	background: url('../img/background1.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+#menu{
+	display: inline-block;
+	background-color:rgb(0,0,0,0.2);
+	width:100%;
+	margin-bottom: 10%;
+}
+ul>li{
+	display: inline-flex;
+	margin-left: 17%;
+}
+
+a{
+	text-decoration:none;
+	color:whitesmoke;
+}
+
+
+//CSS FlipFlop
+
+.distribution{
+	flex-direction:row;
+	margin:10%;
+	width:400px;
+}
+
+#sec{
+	display:flex;
+	justify-content:space-around;
+	margin:auto;
+}
+.scene {
+  width: 200px;
+  height: 260px;
+  perspective: 600px;
+  margin : 10% 0 20% 0;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  top:10px; 
+  border-radius: 20px;
+}
+
+h1{
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+img{
+	width: 200px;
+	height: 185px;
+	border-radius:10px;
+}
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  color:whitesmoke;
+  text-align:center;
+  padding:10px;
+}
+
+.card__face--front {
+  background: #1D255D;
+}
+
+.card__face--back{
+  background: #000e33;
+  transform: rotateY( 180deg );
+}
+
+.card.is-flipped{
+  transform: rotateY(180deg);
+}
+//Fin FlipFlop 
+
+footer{
+	height:500px;
+}
+

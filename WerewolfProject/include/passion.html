@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+	<html lang="FR">
+		<head>
+			<meta charset="utf-8">
+			<title>Cartes du jeu</title>
+			<meta name="description" content="">
+  		    <meta name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+			<link href="../css/passion.css" rel="stylesheet">
+			
+		</head>
+	<body>
+		<navbar id="menu">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="passion.html">Cartes du jeu</a></li>
+				<li><a href="regleDuJeu.html">Règles du jeu</a></li>
+				<li><a href="compteur.html">Compteur</a></li>
+			</ul>
+		</navbar>
+		<section id="sec">
+			<div class="distribution">
+			<div class="scene">
+  				<div class="card">
+    				<div class="card__face card__face--front">
+    					<h1>Le loup garou</h1>
+    					<img src="../img/loup.jpeg" alt="image Loup Garou">
+    				</div>
+    				<div class="card__face card__face--back">
+    					<p>Son objectif est d'éliminer tous les innocents.
+							Chaque nuit, il se réunit avec ses compères Loups pour décider d'une victime à éliminer...
+							Le jour, ils doivent se comporter comme de simples habitants, participer au débat, chercher des loups, enfin bref, tout faire pour que les soupçons ne se tournent pas vers eux... </p>
+    				</div>
+  				</div>
+			</div>
+			<div class="scene">
+  				<div class="card">
+    				<div class="card__face card__face--front">
+    					<h1>Le villageois</h1>
+    					<img src="../img/villageois.png" alt="carte Le villageois">
+    				</div>
+    				<div class="card__face card__face--back">
+    					<p>Son objectif est d'éliminer tous les Loups-Garous. Il ne dispose d'aucun pouvoir particulier : uniquement sa perspicacité et sa force de persuasion.</p>
+    				</div>
+  				</div>
+			</div>
+		</div>
+			<div class="distribution">
+			<div class="scene">
+  				<div class="card">
+    				<div class="card__face card__face--front">
+    					<h1>La sorcière</h1>
+    					<img src="../img/sorciere.png" alt="image sorcière">
+    				</div>
+    				<div class="card__face card__face--back">
+    					<p>Son objectif est d'éliminer tous les Loups-Garous. Elle dispose de deux potions : une potion de vie pour sauver la victime des Loups, et une potion de mort pour assassiner quelqu'un.</p>
+    				</div>
+  				</div>
+			</div>
+			<div class="scene">
+  				<div class="card">
+    				<div class="card__face card__face--front">
+    					<h1>Le capitaine</h1>
+    					<img src="../img/capitaine.jpg" alt="image capitaine">
+    				</div>
+    				<div class="card__face card__face--back">
+    					<p>Son vote est décisif lorsque le village à voter et qu'il n'en ressort aucun coupable</p>
+    				</div>
+  				</div>
+			</div>
+		</div>
+		</div>
+			<div class="distribution">
+			<div class="scene">
+  				<div class="card">
+    				<div class="card__face card__face--front">
+    					<h1>Le Chasseur</h1>
+    					<img src="../img/chasseur.jpeg" alt="imqge chasseur">
+    				</div>
+    				<div class="card__face card__face--back">
+    					<p>Son objectif est d'éliminer tous les Loups-Garous. A sa mort, il doit éliminer un joueur en utilisant sa dernière balle...</p>
+    				</div>
+  				</div>
+			</div>
+			<div class="scene">
+  				<div class="card">
+    				<div class="card__face card__face--front">
+    					<h1>La voyante</h1>
+    					<img src="../img/lavoyante.png" alt="image voyante">
+    				</div>
+    				<div class="card__face card__face--back">
+    					<p>Son objectif est d'éliminer tous les Loups-Garous. Chaque nuit, elle peut espionner un joueur et découvrir sa véritable identité...</p>
+    				</div>
+  				</div>
+			</div>
+		</div>
+			<div class="distribution">
+			<div class="scene">
+  				<div class="card">
+    				<div class="card__face card__face--front">
+    					<h1>La petite fille</h1>
+    					<img src="../img/petite-fille.jpg" alt="image la petite fille">
+    				</div>
+    				<div class="card__face card__face--back">
+    					<p>Son objectif est d'éliminer tous les Loups-Garous. Chaque nuit, elle peut espionner les Loups-Garous.</p>
+    				</div>
+  				</div>
+			</div>
+			<div class="scene">
+  				<div class="card">
+    				<div class="card__face card__face--front">
+    					<h1>Cupidon</h1>
+    					<img src="../img/cupidon.png" alt="image cupidon">
+    				</div>
+    				<div class="card__face card__face--back">
+    					<p>Son objectif est d'éliminer tous les Loups-Garous. Dès le début de la partie, il doit former un couple de deux joueurs. Leur objectif sera de survivre ensemble, car si l'un d'eux meurt, l'autre se suicidera.</p>
+    				</div>
+  				</div>
+			</div>
+		</div>
+		</section>
+		<footer>
+		</footer>
+		<script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+
+		<script>
+			$('.card').click(function(){
+				$(this).toggleClass('is-flipped');
+			});
+			
+		</script>
+
+
+	</body>
+	</html>
